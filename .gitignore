@@ -1,0 +1,21 @@
+# ARCHIVOS IGNORADOS POR GIT
+# Para evitar subir archivos relacionados con el entorno virtual de Python
+.venv/
+
+# Para evitar subir archivos de caché de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Para evitar subir el caché de pytest
+.pytest_cache/
+
+# Para evitar subir archivos temporales
+*.tmp
+*.temp
+
+# Para evitar subir datos generados durante las pruebas
+data/*.json
+
+# Para evitar subir la configuración local de VS Code
+.vscode/
