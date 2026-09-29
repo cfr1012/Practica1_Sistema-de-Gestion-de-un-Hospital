@@ -3,3 +3,5 @@
 # Constructor
 
 # Métodos
+
+# Funciones 
