@@ -1,0 +1,5 @@
+# Clase Paciente
+
+# Constructor
+
+# Métodos
