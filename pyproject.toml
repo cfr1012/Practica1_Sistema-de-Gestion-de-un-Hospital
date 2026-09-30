@@ -1,28 +1,19 @@
+# CONFIGURACIÓN DEL SISTEMA DE CONSTRUCCIÓN DEL PROYECTO
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
-#Acerca del proyecto
+# ACERCA DEL PROYECTO
 [project]
-name = "gestor-pacientes"
+name = "gestor_pacientes"
 version = "0.1.0"
-description = "Sistema de gestión de pacientes hospitalarios"
-readme = "README.md"
+description = "Sistema de gestión de pacientes de un hospital"
+authors = [{ name = "Claudia Fernández Ruiz", email = "cfr1012@alu.ubu.es" }]
 requires-python = ">=3.10"
-authors = [
-    { name = "Claudia Fernández Ruiz" }
-]
-dependencies = []
+readme = "README.md"
 
-[project.optional-dependencies]
-dev = [
-    "pytest>=8.0",
-    "ruff>=0.6"
-]
-
+# CONFIGURACIÓN DEL CÓDIGO FUENTE
+[tool.setuptools]
+package-dir = {"" = "src"}
 [tool.setuptools.packages.find]
 where = ["src"]
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-pythonpath = ["src"]
