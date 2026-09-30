@@ -10,6 +10,9 @@ __pycache__/
 # Para evitar subir el caché de pytest
 .pytest_cache/
 
+# Para evitar subir archivos de empaquetado e instalación Python
+*.egg-info/
+
 # Para evitar subir archivos temporales
 *.tmp
 *.temp
@@ -17,5 +20,8 @@ __pycache__/
 # Para evitar subir datos generados durante las pruebas
 data/*.json
 
-# Para evitar subir la configuración local de VS Code
+# Para evitar subir la configuración local de Visual Studio Code
 .vscode/
+
+# Para evitar subir variables de entorno
+.env
