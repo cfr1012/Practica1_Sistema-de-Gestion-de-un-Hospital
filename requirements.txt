@@ -1,1 +1,5 @@
+# ARCHIVO REQUIREMENTS.TXT
+# Este archivo incluye todos los paquetes de Python necesarios para el funcionamiento del proyecto.
+
+# Para poder ejecutar tests
 pytest>=8.0

@@ -2,7 +2,7 @@
 # Para evitar subir archivos relacionados con el entorno virtual de Python
 .venv/
 
-# Para evitar subir archivos de caché de Python
+# Para evitar subir archivos caché de Python
 __pycache__/
 *.pyc
 *.pyo
