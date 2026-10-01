@@ -49,3 +49,13 @@ class Hospital:
         
         return encontrado
 
+    # LISTAR PACIENTES EN ESPERA
+    def listar_pacientes_espera(self):
+        return self.pacientes_espera
+
+    # LISTAR PACIENTES POR PRIORIDAD
+    def listar_por_prioridad(self):
+        # La máxima prioridad es 5
+        return sorted(self.pacientes_espera, key = lambda x: (-x.prioridad, x.id)) 
+
+
