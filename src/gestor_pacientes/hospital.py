@@ -58,4 +58,18 @@ class Hospital:
         # La máxima prioridad es 5
         return sorted(self.pacientes_espera, key = lambda x: (-x.prioridad, x.id)) 
 
+    # ATENDER AL SIGUIENTE PACIENTE
+    def atender_paciente(self):
+        # En caso de no haber paciente que atender
+        if not self.pacientes_espera:
+            return None
+            
+        # En caso de haber pacientes en espera
+        paciente_atender = self.listar_por_prioridad()[0]
+
+        self.pacientes_espera.remove(paciente_atender)
+        self.historial_atendidos.append(paciente_atender)
+
+        return paciente_atender
+
 
