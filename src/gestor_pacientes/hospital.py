@@ -29,3 +29,23 @@ class Hospital:
         self.id_siguiente_paciente += 1
         
         return paciente_nuevo
+
+    # BUSCAR UN PACIENTE
+    def buscar_paciente(self, id_busqueda):
+        for paciente in self.pacientes_espera:
+            if paciente.id == id_busqueda:
+                return paciente
+                
+        return None
+
+    # ELIMINAR UN PACIENTE
+    def eliminar_paciente(self, id_busqueda):
+        paciente_buscado = self.buscar_paciente(id_busqueda)
+        encontrado = True
+        if paciente_buscado is None:
+            encontrado = False
+        else:
+            self.pacientes_espera.remove(paciente_buscado)
+        
+        return encontrado
+
