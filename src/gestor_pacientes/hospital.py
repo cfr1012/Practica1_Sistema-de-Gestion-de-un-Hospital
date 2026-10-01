@@ -72,4 +72,32 @@ class Hospital:
 
         return paciente_atender
 
+    # CONSULTAR EL HISTORIAL
+    def consultar_historial(self):
+        return self.historial_atendidos
 
+    # MOSTRAR ESTADÍSTICAS
+    def mostrar_estadisticas(self):
+        # Edad media de todos los pacientes registrados
+        pacientes_registrados = self.pacientes_espera + self.historial_atendidos
+        if pacientes_registrados:
+            edad_media = round(sum(paciente.edad for paciente in pacientes_registrados) / len(pacientes_registrados),2)
+        else:
+            edad_media = None
+
+        # Pacientes en espera por prioridad
+        prioridades = {i: 0 for i in range(1, 6)}
+        for paciente in self.pacientes_espera:
+            prioridades[paciente.prioridad] += 1
+
+        texto = (
+            f"Pacientes en espera: {len(self.pacientes_espera)}\n"
+            f"Pacientes atendidos: {len(self.historial_atendidos)}\n"
+            f"Edad media: {edad_media}\n"
+            )
+        
+        # Mostrar prioridades de máxima prioridad a mínima
+        for k, v in reversed(prioridades.items()):
+            texto += f"Prioridad {k}: {v}\n"
+    
+        return texto
