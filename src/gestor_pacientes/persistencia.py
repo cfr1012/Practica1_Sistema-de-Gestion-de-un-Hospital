@@ -37,3 +37,19 @@ def cargar_datos():
 
     except (json.JSONDecodeError, IOError, ValueError): # Manejo de posibles errores en lectura 
         return [], [], 1
+
+# AL SALIR DEL PROGRAMA
+# Se deben guardar los datos y cambios efectuados
+def guardar_datos(pacientes_espera, pacientes_atendidos, id_siguiente_paciente):
+    estado_recuperar = {
+        "pacientes_espera": [paciente.to_dict() for paciente in pacientes_espera],
+        "pacientes_atendidos": [paciente.to_dict() for paciente in pacientes_atendidos],
+        "id_siguiente_paciente": id_siguiente_paciente
+    }
+
+    try:
+        with open(fichero_JSON, "w", encoding="utf-8") as fichero:
+            json.dump(estado_recuperar, fichero, indent=4, ensure_ascii=False)
+
+    except IOError:
+        print("Se ha producido un error en el guardado de datos. Inténtelo de nuevo.")
