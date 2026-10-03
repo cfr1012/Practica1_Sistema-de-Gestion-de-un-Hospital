@@ -21,4 +21,13 @@ def mostrar_menu():
     print("8. Mostrar estadísticas")
     print("0. Guardar y salir")
 
-    
+# CÓDIGO MAIN
+# Se encarga de la ejecución del programa.
+# Muestra el menú y gestiona la opción seleccionada por el usuario.    
+def main():
+
+    # Cargar los datos del estado guardado
+    pacientes_espera, pacientes_atendidos, id_siguiente = cargar_datos()
+
+    # Creación del Hospital con los datos cargados
+    hospital = Hospital(pacientes_espera, pacientes_atendidos, id_siguiente)
