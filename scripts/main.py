@@ -31,3 +31,31 @@ def main():
 
     # Creación del Hospital con los datos cargados
     hospital = Hospital(pacientes_espera, pacientes_atendidos, id_siguiente)
+
+# GESTIÓN DE LAS OPCIONES DEL MENÚ
+# Bucle principal el menú - Se repite hasta que el usuario decida salir
+    while True:
+        mostrar_menu()
+
+        opcion = input("Selecciona una opción, insertando el número: ").strip()
+
+        if opcion == "1":
+            break
+        elif opcion == "2":
+            break
+        elif opcion == "3":
+            break
+        elif opcion == "4":
+            break
+        elif opcion == "5":
+            break
+        elif opcion == "6":
+            break
+        elif opcion == "7":
+            break
+        elif opcion == "8":
+            break
+        elif opcion == "0":
+            break
+        else:
+            break
